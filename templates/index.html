@@ -31,7 +31,39 @@
 </head>
 <!-- NAVBAR
 ================================================== -->
+<body data-spy="scroll" data-target="#sidebar" data-offset="150">
+<div class="navbar-wrapper">
+    <div class="container">
 
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'index' %}">NUPP 2017</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="/static/NUPP%202a.pdf" target="_blank">Call For Papers</a></li>
+                        <li><a href="{% url 'register' %}">Register</a></li>
+                        <li><a href="{% url 'uploadAbstract' %}">Upload Abstract</a></li>
+                        <li><a href="{% url 'travel' %}">Travel</a></li>
+                        <li><a href="{% url 'accomodation' %}">Accommodation</a></li>
+                        <li><a href="{% url 'venue' %}">Venue</a></li>
+                        <li><a href="{% url 'contactus' %}">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+</div>
 
 
 <!-- Carousel

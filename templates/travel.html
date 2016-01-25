@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>NUPP 2017</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="/static/styles.css" rel="stylesheet">
+
+    <!-- Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+
+</head>
+<!-- NAVBAR
+================================================== -->
+<body data-spy="scroll" data-target="#travelSidebar" data-offset="150">
+<div class="navbar-wrapper">
+    <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'index' %}">NUPP 2017</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="/static/NUPP%202a.pdf" target="_blank">Call For Papers</a></li>
+                        <li><a href="{% url 'register' %}">Register</a></li>
+                        <li><a href="{% url 'uploadAbstract' %}">Upload Abstract</a></li>
+                        <li><a href={% url 'travel' %}>Travel</a></li>
+                        <li><a href={% url 'accomodation' %}>Accommodation</a></li>
+                        <li><a href={% url 'venue' %}>Venue</a></li>
+                        <li><a href={% url 'contactus' %}>Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+</div>
+
+<!-- fix for mobile devices-->
+<div class="side-navigation col-md-4" id="travelSidebar">
+    <ul class="nav nav-pills nav-stacked" id="sidebarNav" data-spy="affix">
+        <!--li><a href="#directions">Directions</a></li>
+        <li><a href="#plane">Flights to London</a></li-->
+        <li><a href="#underground">Underground</a></li>
+        <li><a href="#tram">Tram</a></li>
+        <li><a href="#train">Train</a></li>
+        <li><a href="#bus">Bus</a></li>
+    </ul>
+</div>
+
+<div class="main-body" style="height: 100%">
+
+    <!--div class="row featurette" style="height: 100%">
+
+        <div class="featurette-heading" id="directions">Getting to Croydon</div>
+
+        <label for="locationInput">Please enter your location for customised travel details:</label>
+        <div class="input-group">
+            <input id="locationInput" class="form-control" type="text" aria-describedby="locationAddon">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker" id="getLocationButton"></span></span>
+        </div>
+        <div id="map" class="col-md-12 img-responsive"></div>
+
+    </div>
+
+    <div class="row featurette">
+
+        <div class="featurette-heading" id="plane">Flights to London</div>
+
+        <p id="flightParagraph" class="lead">Flight prices will be available here soon.</p>
+
+        <table class="table table-striped" id="flightDetails"></table>
+
+    </div-->
+
+    <div class="row featurette">
+
+        <div class="featurette-heading" id="underground">Underground</div>
+
+        <p class="lead">Croydon is not served by the Underground network. However the old East London Line has been
+            integrated into the new
+            London Overground network, linking West Croydon Station to Dalston Junction via New Cross, Docklands, and
+            Whitechapel.
+            This service, which started in June 2010, uses new rolling stock with longitudinal seating layouts similar
+            to
+            those used
+            on Underground trains allowing for more standing room. It is operated by Transport for London as part of the
+            London
+            Overground scheme.</p>
+
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+
+        <div class="featurette-heading" id="tram">Tram</div>
+
+        <p class="lead">A tramlink tram bound for Croydon
+            Tramlink, opened in 2000, is the first modern tram system to operate in Greater London. Trams at the moment
+            have
+            destinations at Beckenham, Wimbledon, Elmers End and New Addington with all lines traveling through Croydon,
+            on
+            the
+            Croydon Loop. It can also be used to reach the Underground in Wimbledon. Tramlink also has planned
+            extensions to
+            the M25
+            motorway (Park & Ride system), Sutton, Bromley, Lewisham with a planned extension to Crystal Palace. All
+            these
+            plans
+            have been shelved by the current Major of London.</p>
+
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+
+        <div class="featurette-heading" id="train">Train</div>
+
+
+        <p class="lead">East Croydon station is the second busiest station in London and the main station for Croydon.
+            Fast
+            trains run into the
+            centre of London terminating at Victoria or London Bridge stations in about 15-20 minutes.
+            There are direct service connections to London Gatwick and London Luton airports. Journey times from East
+            Croydon to
+            London Gatwick airport range from 15 to 36 minutes, with an average of 13 services per hour during the day.
+            The
+            journey
+            time from East Croydon to London Luton airport is approximately 66 minutes, with an average of 4 services
+            per
+            hour
+            during the day. The train service for London Luton airport also stops at London St Pancras (average journey
+            time
+            approximately 40 minutes), providing interconnections for Eurostar services to Lille, Paris and Brussels, as
+            well as
+            national services to the north of England & Scotland. There are no direct train services to London Heathrow
+            airport.
+            Typical fastest journey time would be approximately 90 minutes and involve at least two changes.
+            All services from London Victoria that head to the south coast stop here. Journey times from East Croydon to
+            Brighton
+            range from 36 to 60 minutes, with an average of 9 services per hour during the day.
+            Services are provided by Southern and First Capital Connect.
+            West Croydon station—which features in the famous story "Casting the Runes" by ghost story master M.R.
+            James—is
+            an
+            interchange station for train, tram and bus. Trains run into the centre of London terminating at Victoria or
+            London
+            Bridge stations in about 20-40 minutes. Services leaving London generally terminate at Sutton but some
+            continue
+            to
+            Guildford, Dorking and Epsom Downs.</p>
+
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+
+        <div class="featurette-heading" id="bus">Bus</div>
+
+
+        <p class="lead">Croydon is well served by the London bus network, with a major bus station at West Croydon and a
+            new
+            one opening on the
+            eastern side of Croydon next to the Croydon clocktower and Park Place shopping centre soon. Bus services in
+            the
+            centre
+            of Croydon include, but are not limited to:
+            Towards central London: bus routes 50, 60, 109, 250, 468, X68 (a peak time express service).
+            Other routes: 75, 119 (Purley Way (Croydon Airport) - Bromley), 157, 197, 264, 289, 312 (South Croydon Bus
+            Garage -
+            Peckham, via Central Croydon, Addiscombe), 407, 410, 450, 455, 466 (not too reliable), and X26 (West/East
+            Croydon -
+            Sutton - Kingston - Heathrow Central (Express)).</p>
+
+    </div>
+
+</div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+<script src="/static/script.js"></script>
+<script src="/static/travelScript.js"></script>
+
+</html>
