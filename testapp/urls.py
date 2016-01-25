@@ -18,21 +18,4 @@ from django.conf import settings
 from django.contrib import admin
 from testapp import views
 
-urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^venue/', 'testapp.views.venue', name='venue'),
-    url(r'^accomodation/', 'testapp.views.accomodation', name='accomodation'),
-    url(r'^contactus/', 'testapp.views.contactus', name='contactus'),
-    url(r'^travel/', 'testapp.views.travel', name='travel'),
-    url(r'^register/', include('register.urls')),
-    url(r'^uploadAbstract/', include('uploadAbstract.urls')),
-    url(r'^$', 'testapp.views.index', name='index'),
 
-                       ]
-
-if settings.DEBUG:
-    urlpatterns += patterns(
-        'django.views.static',
-        (r'^media/(?P<path>.*)',
-        'serve',
-        {'document_root': settings.MEDIA_ROOT}), )
