@@ -1,9 +1,12 @@
-{% extends 'baseTemplates/base.html' %}
+{% extends 'baseTemplates/infoPageBase.html' %}
 {% load staticfiles %}
 
 {% block title %}Home{% endblock %}
 
 {%  block body_block %}
+    {% with 'story_list' as expectedVarName %}
+    {{ block.super }}
+    {% endwith %}
 <!-- Carousel
 ================================================== -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -59,7 +62,6 @@
 </div>
 
 <!-- START THE FEATURETTES -->
-
 <div class="main-body">
 
     <hr class="featurette-divider">
@@ -355,6 +357,7 @@
     </footer>
 
 </div><!-- /.container -->
+
 
 {% endblock %}
 

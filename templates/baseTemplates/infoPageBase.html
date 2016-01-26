@@ -1,10 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'baseTemplates/base.html' %}
+{% load staticfiles %}
 
-</body>
-</html>
+{% block title %}Home{% endblock %}
+
+{% block body_block %}
+
+    <div class="side-navigation col-md-4" id="sidebar">
+        <ul class="nav nav-pills nav-stacked" id="sidebarNav" data-spy="affix">
+            {% for story in story_list %}
+                <li><a href="#id_{{ story.headline }}">{{ story.headline }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="main-body">
+
+        {% for story in story_list %}
+
+            <div class="row featurette">
+
+                <h2 class="featurette-heading" id="id_{{ story.headline }}">
+                    {{ story.headline }}
+                </h2>
+                <p>{{ story.text }}</p>
+
+            </div>
+
+            <hr class="featurette-divider">
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
