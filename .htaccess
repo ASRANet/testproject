@@ -1,11 +1,19 @@
+RewriteEngine On
+RewriteBase /
+
+ErrorDocument 403 http://asranet.pythonanywhere.com
+Order deny,allow
+Deny from all
+Allow from !^194.247.233.233
+
 AddHandler fcgid-script .fcgi
 RewriteEngine on
 RewriteBase /
 
 # Exclude any paths that should be served literally:
-RewriteRule 	^/testproject/static/		-			[L,NC]
+RewriteRule 	^static/		-			[L,NC]
 # Add a default page
-RewriteRule 	^$			^/testproject/templates/			[NC]
+RewriteRule 	^$			home			[NC]
 
 RewriteCond %{REQUEST_FILENAME} !(cgi-bin/testproject.fcgi)
 RewriteRule 	^(.*)$ 			cgi-bin/testproject.fcgi/$1	[QSA,L]
