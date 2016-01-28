@@ -1,4 +1,4 @@
 RewriteEngine On
 RewriteBase /
 
-Redirect 301 http://nupp.nuclearpowerplantconference.com
+Redirect 301 nupp.nuclearpowerplantconference.com
