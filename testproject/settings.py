@@ -25,7 +25,7 @@ SECRET_KEY = 'bb5i^nw^9^pb82k%8!6_p8b2b&b_+3%1@w72@!eyyhzk(y)@zo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', 'asranet.pythonanywhere.com']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'testapp',
     'register',
     'uploadAbstract',
@@ -71,6 +72,8 @@ TEMPLATES = [
         },
     },
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 WSGI_APPLICATION = 'testproject.wsgi.application'
 

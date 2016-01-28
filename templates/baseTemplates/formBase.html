@@ -5,12 +5,11 @@
 
 {% block body_block %}
 
-        <div class="row featurette">
+    <div class="row featurette">
 
         <h2 class="featurette-heading">{% block form_title %}{% endblock %}</h2>
 
         <form id="category_form" method="post" action={% block form_action %}{% endblock %}>
-
 
             <div class="content_white" style="text-align: right">
                 <div class="row">
@@ -28,7 +27,7 @@
                                                for="id_{{ field.name }}">{{ field.label }}</label>
                                         <div class="col-md-7">
                                             <input class="form-control" name="{{ field.label }}"
-                                                   id="id_{{ field.name }}">
+                                                   id="id_{{ field.name }}" type="{{ field_type }}">
                                         </div>
 
                                         <p class="col-md-2 help-text">

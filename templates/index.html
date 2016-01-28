@@ -1,12 +1,10 @@
-{% extends 'baseTemplates/infoPageBase.html' %}
+{% extends 'baseTemplates/base.html' %}
 {% load staticfiles %}
 
 {% block title %}Home{% endblock %}
 
 {%  block body_block %}
-    {% with 'story_list' as expectedVarName %}
-    {{ block.super }}
-    {% endwith %}
+
 <!-- Carousel
 ================================================== -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
