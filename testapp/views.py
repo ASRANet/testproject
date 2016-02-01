@@ -20,3 +20,7 @@ def contactus(request):
 
 def travel(request):
     return render(request, 'travel.html')
+
+
+def cookies(request):
+    return render(request, 'cookies.html')

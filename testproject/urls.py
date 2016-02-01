@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^travel/', 'testapp.views.travel', name='travel'),
     url(r'^register/', include('register.urls')),
     url(r'^uploadAbstract/', include('uploadAbstract.urls')),
+    url(r'^cookies/', 'testapp.views.cookies', name='cookies'),
     url(r'^$', 'testapp.views.index', name='index'),
 
                        ]
