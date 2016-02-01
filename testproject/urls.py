@@ -16,6 +16,25 @@ Including another URLconf
 from django.conf.urls import url, include, patterns
 from django.conf import settings
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
+from django.contrib.sitemaps import Sitemap
+from django.core.urlresolvers import reverse
+
+
+class Sitemaps(Sitemap):
+
+    priority = 0.6
+    changefreq = 'monthly'
+
+    def items(self):
+        return ['venue', 'accomodation', 'contactus', 'travel', 'register', 'uploadAbstract', 'cookies', 'index']
+
+    def location(self, item):
+        return reverse(item)
+
+sitemaps = {
+    'static': Sitemaps,
+}
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -27,7 +46,8 @@ urlpatterns = [
     url(r'^uploadAbstract/', include('uploadAbstract.urls')),
     url(r'^cookies/', 'testapp.views.cookies', name='cookies'),
     url(r'^$', 'testapp.views.index', name='index'),
-
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
+    name='django.contrib.sitemaps.views.sitemap'),
                        ]
 
 if settings.DEBUG:
@@ -36,3 +56,5 @@ if settings.DEBUG:
         (r'^media/(?P<path>.*)',
         'serve',
         {'document_root': settings.MEDIA_ROOT}), )
+
+
