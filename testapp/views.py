@@ -34,7 +34,7 @@ def index(request):
                      ["Non - Linear Analysis"],
                      ["Structural Integrity"],
                      ["Lifetime Behaviour"],
-                     ["Risk Analysis and Retrabitrty"],
+                     ["Risk Analysis and Reliability"],
                      ["Probabilistic Seismic Hazard"],
                      ["Risk Management"],
                      ["Decommissioning Technology"],
