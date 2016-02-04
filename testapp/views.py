@@ -254,7 +254,6 @@ def venue(request):
         },
     ]
 
-
     return render(request, 'venue.html', {"story_list": stories})
 
 
