@@ -1,6 +1,6 @@
 window.onload = function(){
     checkKeyDeadlines();
-}
+};
 
 //Check if date of key deadlines has passed and update HTML and progress bar as required
 function checkKeyDeadlines() {

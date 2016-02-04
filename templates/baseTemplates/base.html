@@ -6,11 +6,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="google-site-verification" content="GhSMT2YCWklPbhw59aNgGcd3TYtqc8jNJ9k4uV5Ixng" />
-    <link rel="icon" href="../../favicon.ico">
+
+    <meta name="description" content="Nuclear Power Plant Conference 2017">
+    <meta name="keywords" content="nuclear, power, plant, conference, croydon, london, 2017">
+    <meta name="author" content="ASRANet">
+    <meta name="google-site-verification" content="GhSMT2YCWklPbhw59aNgGcd3TYtqc8jNJ9k4uV5Ixng"/>
+    <link rel="icon" href="{% static "Images/favicon.jpg" %}">
 
     <title>NUPP 2017 - {% block title %}{% endblock %}</title>
 
@@ -52,7 +53,7 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'index' %}">Home</a></li>
                         <li><a href="/static/NUPP%202a.pdf" target="_blank">Call For Papers</a></li>
                         <li><a href="{% url 'register' %}">Register</a></li>
                         <li><a href="{% url 'uploadAbstract' %}">Upload Abstract</a></li>
@@ -67,6 +68,8 @@
 
     </div>
 </div>
+
+{% block carousel %}{% endblock %}
 
 {% block body_block %}{% endblock %}
 

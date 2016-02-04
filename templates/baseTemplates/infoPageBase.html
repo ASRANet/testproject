@@ -1,14 +1,24 @@
 {% extends 'baseTemplates/base.html' %}
 {% load staticfiles %}
 
-{% block title %}Home{% endblock %}
+{% block title %}
+    {% with 'title' as expectedVarName %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}
+
+{% block carousel %}
+    {% with 'carousel' as expectedVarName %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}
 
 {% block body_block %}
 
     <div class="side-navigation col-md-4" id="sidebar">
         <ul class="nav nav-pills nav-stacked" id="sidebarNav" data-spy="affix">
             {% for story in story_list %}
-                <li><a href="#id_{{ story.headline }}">{{ story.headline }}</a></li>
+                <li><a href="#{{ story.id }}">{{ story.headline }}</a></li>
             {% endfor %}
         </ul>
     </div>
@@ -19,16 +29,51 @@
 
             <div class="row featurette">
 
-                <h2 class="featurette-heading" id="id_{{ story.headline }}">
+                <h2 class="featurette-heading" id="{{ story.id }}">
                     {{ story.headline }}
                 </h2>
-                <p>{{ story.text }}</p>
+
+                {% if story.type == "text" %}
+
+                    {% for paragraph in story.text %}
+                        <p style="{{ story.style }}" class="lead">{{ paragraph }}</p>
+                    {% endfor %}
+
+                {% endif %}
+
+                {% if story.type == "table" %}
+
+                    {% for lead in story.lead %}
+                        <p class="lead">{{ lead }}</p>
+                    {% endfor %}
+
+                    <table class="table {{ story.class }}" style="text-align: center">
+                        {% for row in story.text %}
+                            <tr>
+                                {% for column in row %}
+                                    <td>
+                                        {{ column }}
+                                    </td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+
+                {% endif %}
+
+                {% if story.type == "html" %}
+                    {% autoescape off %}
+                        {{ story.text }}
+                    {% endautoescape %}
+                {% endif %}
 
             </div>
 
             <hr class="featurette-divider">
 
         {% endfor %}
+
+        {% block additions_block %}{% endblock %}
 
     </div>
 
