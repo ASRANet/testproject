@@ -1,4 +1,0 @@
-RewriteEngine On
-RewriteBase /
-
-Redirect 301 nupp.nuclearpowerplantconference.com

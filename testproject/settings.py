@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
-    'django.contrib.sites',
     'crispy_forms',
     'testapp',
     'register',
@@ -46,6 +45,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE_CLASSES = [
+    'sslify.middleware.SSLifyMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -122,6 +122,9 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 
 # Static files (CSS, JavaScript, Images)
