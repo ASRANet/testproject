@@ -46,6 +46,7 @@ urlpatterns = [
     url(r'^uploadAbstract/', include('uploadAbstract.urls')),
     url(r'^cookies/', 'testapp.views.cookies', name='cookies'),
     url(r'^$', 'testapp.views.index', name='index'),
+    url(r'^index/', 'testapp.views.index', name='index'),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
     name='django.contrib.sitemaps.views.sitemap'),
                        ]
