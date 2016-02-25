@@ -20,10 +20,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'bb5i^nw^9^pb82k%8!6_p8b2b&b_+3%1@w72@!eyyhzk(y)@zo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'nupp.nuclearpowerplantconference.com', 'www.nuclearpowerplantconference.com']
 
@@ -123,8 +123,15 @@ USE_L10N = True
 
 USE_TZ = True
 
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+#SESSION_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
+
+SSLIFY_DISABLE = True
+
+EMAIL_HOST = 'auth.smtp.1and1.co.uk'
+EMAIL_HOST_USER = 'info@nuclearpowerplantconference.com'
+EMAIL_HOST_PASSWORD = 'NUPP2017*'
+EMAIL_PORT = 25
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
