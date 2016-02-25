@@ -113,6 +113,9 @@ body {
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
+.collapsed{
+    max-width: 100%;
+}
 
 @media (max-width: 992px) {
 
@@ -123,6 +126,7 @@ body {
         margin-left: 5%;
         margin-right: 5%;
         margin-top: 10%;
+        max-width: 100%;
     }
 
     .form-body{
@@ -131,19 +135,14 @@ body {
         margin-top: 10%;
     }
 
-    .carousel{
-        margin: 0;
-        padding: 0;
-    }
-
     #myCarousel{
         display: none;
     }
 
     #mobileCarousel{
         display: block;
+        max-height: 50%;
     }
-
 
 }
 @media (min-width: 768px) {
