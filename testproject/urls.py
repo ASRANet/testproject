@@ -27,7 +27,7 @@ class Sitemaps(Sitemap):
     changefreq = 'monthly'
 
     def items(self):
-        return ['venue', 'accomodation', 'contactus', 'travel', 'register', 'uploadAbstract', 'cookies', 'index']
+        return ['index', 'register', 'uploadAbstract', 'venue', 'accomodation', 'contactus', 'travel', 'cookies']
 
     def location(self, item):
         return reverse(item)
@@ -38,15 +38,15 @@ sitemaps = {
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^index/', 'testapp.views.index', name='index'),
+    url(r'^register/', include('register.urls')),
+    url(r'^uploadAbstract/', include('uploadAbstract.urls')),
     url(r'^venue/', 'testapp.views.venue', name='venue'),
     url(r'^accomodation/', 'testapp.views.accomodation', name='accomodation'),
     url(r'^contactus/', 'testapp.views.contactus', name='contactus'),
     url(r'^travel/', 'testapp.views.travel', name='travel'),
-    url(r'^register/', include('register.urls')),
-    url(r'^uploadAbstract/', include('uploadAbstract.urls')),
     url(r'^cookies/', 'testapp.views.cookies', name='cookies'),
     url(r'^$', 'testapp.views.index', name='index'),
-    url(r'^index/', 'testapp.views.index', name='index'),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
     name='django.contrib.sitemaps.views.sitemap'),
                        ]

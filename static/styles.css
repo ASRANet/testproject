@@ -222,8 +222,18 @@ color: white; !important;
 
 .back-to-top{
 
+    text-align: center;
     position: fixed;
     bottom: 5%;
     left: 5%;
+
+}
+
+#progressDiv{
+
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 
 }
