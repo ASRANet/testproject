@@ -7,13 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Nuclear Power Plant Conference 2017">
-    <meta name="keywords" content="nuclear, power, plant, conference, croydon, london, 2017">
+    <meta name="description"
+          content="Register for ASRANet's 2017 Nuclear Power Plant Conference now. This conference presents the perfect
+          opportunity for you, as it aims to provide an ideal platform for industry leading researchers, technology
+          developers, industrial players and supply chain partners to converge.">
+    <meta name="keywords" content="nuclear, power, plant, conference, croydon, london, 2017, technology, innovation,
+    industry, papers, research, ASRANet">
     <meta name="author" content="ASRANet Ltd">
     <meta name="google-site-verification" content="GhSMT2YCWklPbhw59aNgGcd3TYtqc8jNJ9k4uV5Ixng"/>
     <link rel="icon" href="{% static "Images/favicon.jpg" %}">
 
-    <title>NUPP 2017 - {% block title %}{% endblock %}</title>
+    <title>Nuclear Power Plant Conference 2017 - {% block title %}{% endblock %}</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -32,6 +36,28 @@
     <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
 
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Event",
+  "name": "The Nuclear Power Plant Conference 2017",
+  "startDate" : "2017-02-6T12:00",
+  "url" : "https://nupp.nuclearpowerplantconference.com",
+  "location" : {
+    "@type" : "Place",
+    "sameAs" : "https://www.jurysinns.com/hotels/london/croydon",
+    "name" : "Jury's Inn, Croydon",
+    "address" : "Wellesley Rd, London CR0 9XY"
+  },
+  "offers" : {
+  	"@type" : "Offer",
+    "price" : 450,
+    "priceCurrency" : "GBP",
+    "url" : "https://nupp.nuclearpowerplantconference.com/register"
+    }
+}
+</script>
+
 </head>
 <!-- NAVBAR
 ================================================== -->
@@ -40,32 +66,32 @@
 
 <body data-spy="scroll" data-target="#sidebar" data-offset="150">
 <div class="navbar-wrapper">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                            aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="{% url 'index' %}">NUPP 2017</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="{% url 'index' %}">Home</a></li>
-                        <li><a href="/static/NUPP%202a.pdf" target="_blank">Call For Papers</a></li>
-                        <li><a href="{% url 'register' %}">Register</a></li>
-                        <li><a href="{% url 'uploadAbstract' %}">Upload Abstract</a></li>
-                        <li><a href="{% url 'travel' %}">Travel</a></li>
-                        <li><a href="{% url 'accomodation' %}">Accommodation</a></li>
-                        <li><a href="{% url 'venue' %}">Venue</a></li>
-                        <li><a href="{% url 'contactus' %}">Contact Us</a></li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'index' %}">NUPP 2017</a>
             </div>
-        </nav>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="/static/NUPP%202a.pdf" target="_blank">Call For Papers</a></li>
+                    <li><a href="{% url 'register' %}">Register</a></li>
+                    <li><a href="{% url 'uploadAbstract' %}">Upload Abstract</a></li>
+                    <li><a href="{% url 'travel' %}">Travel</a></li>
+                    <li><a href="{% url 'accomodation' %}">Accommodation</a></li>
+                    <li><a href="{% url 'venue' %}">Venue</a></li>
+                    <li><a href="{% url 'contactus' %}">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 </div>
 

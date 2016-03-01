@@ -10,7 +10,7 @@ def index(request):
         "type": "text",
         "style": "text-align: justify",
         "text": [
-            "Many countries are currently constructing or are in the planning/designing stage of building nuclear" +
+            "Many countries are currently constructing or are in the planning/designing stage of building nuclear " +
             "power plants. This is primarily to move away from the depleting fossil fuel and in an attempt to" +
             "combat climate change. However, design construction and operation of these structures poses particular" +
             "challenge with respect to handling radioactive material. The conference aims to bring together " +
