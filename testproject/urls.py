@@ -21,18 +21,44 @@ from django.contrib.sitemaps import Sitemap
 from django.core.urlresolvers import reverse
 
 
-class Sitemaps(Sitemap):
+class HomeSitemap(Sitemap):
 
-    priority = 0.6
+    priority = 1.0
     changefreq = 'monthly'
 
     def items(self):
-        return ['index', 'register', 'uploadAbstract', 'venue', 'accomodation', 'contactus', 'travel', 'cookies']
+        return ['index']
+
+    def location(self, item):
+        return reverse(item)
+
+
+class PrioritySitemap(Sitemap):
+
+    priority = 0.8
+    changefreq = 'monthly'
+
+    def items(self):
+        return ['contactus', 'register', 'uploadAbstract']
+
+    def location(self, item):
+        return reverse(item)
+
+
+class Sitemaps(Sitemap):
+
+    priority = 0.5
+    changefreq = 'monthly'
+
+    def items(self):
+        return ['venue', 'accomodation', 'travel', 'cookies']
 
     def location(self, item):
         return reverse(item)
 
 sitemaps = {
+    'homepage': HomeSitemap,
+    'priority': PrioritySitemap,
     'static': Sitemaps,
 }
 
