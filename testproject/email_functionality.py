@@ -32,7 +32,7 @@ def email_client(self, subject, text):
     fp.close()
     msg_img.add_header('Content-ID', '<{}>'.format(f))
     msg.attach(msg_img)
-    msg.send()
+    msg.send(fail_silently=True)
 
 
 def email_admin(self, subject, text, sorted_self):
@@ -61,4 +61,4 @@ def email_admin(self, subject, text, sorted_self):
 
     msg = EmailMultiAlternatives(subject, text, 'info@nuclearpowerplantconference.com', ['info@nuclearpowerplantconference.com'])
     msg.attach(self.first_name + self.last_name + "NUPP.pdf", pdf, "application/pdf")
-    msg.send()
+    msg.send(fail_silently=True)

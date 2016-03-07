@@ -22,16 +22,13 @@ class User(models.Model):
                        ["Email", self.email], ["Telephone", self.telephone], ["Address", self.address],
                        ["City", self.city], ["Country", self.country], ["Postcode", self.postcode],
                        ["Organisation", self.organisation], ["Paying Normal Fee", str(self.fee_normal)],
-                       ["Paying Student Fee", str(self.fee_student)],
-
-
-
-
-                       ]
+                       ["Paying Student Fee", str(self.fee_student)],]
 
         email_client(self, "NUPP 2017 Conference Registration", "You are officially registered for NUPP 2017")
         email_admin(self, "New NUPP 2017 Registrant", "Please find enclosed the details for the new DISS "
                                                       "2017 registrant.", sorted_self)
+
+        super(User, self).save(*args, **kwargs)
 
     def __unicode__(self):
         return self.email

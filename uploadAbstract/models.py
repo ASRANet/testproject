@@ -13,13 +13,14 @@ class SubmittedAbstract(models.Model):
 
     def save(self, *args, **kwargs):
 
-            sorted_self = [["Salutation", self.salutation], ["First name", self.first_name], ["Last Name", self.last_name],
-                           ["Email", self.email], ["Paper Title", self.paper_title], ["Abstract", self.abstract],
-                           ]
+        sorted_self = [["Salutation", self.salutation], ["First name", self.first_name], ["Last Name", self.last_name],
+                       ["Email", self.email], ["Paper Title", self.paper_title], ["Abstract", self.abstract],
+                       ]
 
-            email_client(self, "NUPP 2017 Abstract Upload", "You have uploaded an abstract.")
-            email_admin(self, "New NUPP 2017 Abstract", "Please find enclosed the details for the new NUPP "
-                                                        "2017 abstract upload.", sorted_self)
+        email_client(self, "NUPP 2017 Abstract Upload", "You have uploaded an abstract.")
+        email_admin(self, "New NUPP 2017 Abstract", "Please find enclosed the details for the new NUPP "
+                                                    "2017 abstract upload.", sorted_self)
+        super(SubmittedAbstract, self).save(*args, **kwargs)
 
     def __unicode__(self):
         return self.email
