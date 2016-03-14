@@ -70,6 +70,7 @@ urlpatterns = [
     url(r'^venue/', 'testapp.views.venue', name='venue'),
     url(r'^accomodation/', 'testapp.views.accomodation', name='accomodation'),
     url(r'^contactus/', 'testapp.views.contactus', name='contactus'),
+    url(r'^authorinstructions/', 'testapp.views.author_instructions', name='authorInstructions'),
     url(r'^travel/', 'testapp.views.travel', name='travel'),
     url(r'^cookies/', 'testapp.views.cookies', name='cookies'),
     url(r'^$', 'testapp.views.index', name='index'),

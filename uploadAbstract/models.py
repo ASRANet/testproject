@@ -20,7 +20,7 @@ class SubmittedAbstract(models.Model):
                        ["Paper Title", self.paper_title], ["Abstract", self.abstract],
                        ]
 
-        email_client(self, "NUPP 2017 Abstract Upload", "Thank you for uploading an abstract for NUPP 2017.")
+        email_client(self, "NUPP 2017 Abstract Upload", "Thank you for uploading an abstract for NUPP 2017")
         email_admin(self, "New NUPP 2017 Abstract", "Please find enclosed the details for the new NUPP "
                                                     "2017 abstract upload.", sorted_self)
         super(SubmittedAbstract, self).save(*args, **kwargs)

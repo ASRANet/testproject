@@ -265,6 +265,70 @@ def contactus(request):
     return render(request, 'contactUs.html')
 
 
+def author_instructions(request):
+    stories = [
+        {
+            "headline": "Speaker Information",
+            "type": "html",
+            "id": "speakerInstructions",
+            "text": "<ul><li>"
+                    "Presentations should be in MS PowerPoint or PDF format. Please keep the use of video and audio to "
+                    "a minimum as it could prove problematic."
+                    "</li><li>"
+                    "All presentations should be emailed to us a week before the conference. If authors wish to make "
+                    "any changes to their presentations please let us know as soon as possible and send the relevant "
+                    "files to us 24 hours before you are due to speak."
+                    "</li><li>"
+                    "The timeslots allocated to presenters are 20min: 15 minutes for your presentation and a further 5 "
+                    "minutes for questions from the audience. The session chairs will remind you when your time has "
+                    "finished. Please keep these times in mind.</ul></li><ul><li>"
+                    "All speakers should be in the relevant room, in which their presentation will take place, at least"
+                    " 5 minutes before their session starts.</li></ul>",},
+
+        {
+            "headline": "Author Information",
+            "type": "html",
+            "id": "authorInstructions",
+            "text": "<ul><li>"
+                    "Please submit all papers by 4 January 2017 by emailing them to us. If you are worried about making"
+                    " the deadline then please contact us, so that an extension can be arranged."
+                    "</li><li>"
+                    "<a href='/static/paperFormat.doc'>Here is the official template</a> to use for all papers. "
+                    "This template can also be used for abstracts."
+                    "</li><li>"
+                    "All papers should be submitted in PDF format and should not be numbered. There is no specific page"
+                    " number requirement for papers, although most tend to be around the 8 page mark."
+                    "</li><li>"
+                    "In addition, you must also fill out and sign a Copyright Release form "
+                    "<a href='/static/copyrightForm.doc'>(found here)</a> and email a "
+                    "scanned copy of that to us, so that your paper can be included in the Official Conference "
+                    "Proceedings.</ul></li>"
+        },
+        {
+            "headline": "Exhibitor Information",
+            "type": "html",
+            "id": "exhibitorInstructions",
+            "text": "<ul><li>"
+                    "All exhibitors should arrive at the conference venue at least half an hour before the conference "
+                    "starts on Day 1."
+                    "</li><li>"
+                    "All material that exhibitors wish to display should be supplied by the exhibitor and relevant "
+                    "delivery and collection services to the venue arranged."
+                    "</li><li>"
+                    "Please let us know when delivery is scheduled, so that we can make sure to make venue staff aware."
+                    "</li><li>"
+                    "Should you want to bring heavy/bulky exhibits please let us know beforehand as this may not be "
+                    "possible in all cases."
+                    "</li><li>"
+                    "All exhibition packages include a free registration, so you can take part in conference sessions. "
+                    "All breaks will take place in the exhibition room(s)."
+                    "</li></ul>"
+        }
+    ]
+
+    return render(request, 'baseTemplates/infoPageBase.html', {"story_list": stories})
+
+
 def travel(request):
     stories = [
         {
