@@ -22,7 +22,6 @@ from django.core.urlresolvers import reverse
 
 
 class HomeSitemap(Sitemap):
-
     priority = 1.0
     changefreq = 'monthly'
 
@@ -34,7 +33,6 @@ class HomeSitemap(Sitemap):
 
 
 class PrioritySitemap(Sitemap):
-
     priority = 0.8
     changefreq = 'monthly'
 
@@ -46,7 +44,6 @@ class PrioritySitemap(Sitemap):
 
 
 class Sitemaps(Sitemap):
-
     priority = 0.5
     changefreq = 'monthly'
 
@@ -55,6 +52,7 @@ class Sitemaps(Sitemap):
 
     def location(self, item):
         return reverse(item)
+
 
 sitemaps = {
     'homepage': HomeSitemap,
@@ -74,15 +72,14 @@ urlpatterns = [
     url(r'^travel/', 'testapp.views.travel', name='travel'),
     url(r'^cookies/', 'testapp.views.cookies', name='cookies'),
     url(r'^$', 'testapp.views.index', name='index'),
+    url(r'^robots\.txt$', 'testapp.views.robots', name='robots'),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
-    name='django.contrib.sitemaps.views.sitemap'),
-                       ]
+        name='django.contrib.sitemaps.views.sitemap'),
+]
 
 if settings.DEBUG:
     urlpatterns += patterns(
         'django.views.static',
         (r'^media/(?P<path>.*)',
-        'serve',
-        {'document_root': settings.MEDIA_ROOT}), )
-
-
+         'serve',
+         {'document_root': settings.MEDIA_ROOT}), )
