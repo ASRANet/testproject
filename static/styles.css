@@ -237,3 +237,8 @@ color: white; !important;
     padding-right: 0;
 
 }
+
+.footer-title{
+    text-align: center;
+    background: rgba(220, 20, 60, .2);
+}
