@@ -210,6 +210,17 @@ body {
     color: white; !important;
 }
 
+#sidebarNav > li > a {
+    color: crimson;
+}
+
+#sidebar .nav > .active > a,
+#sidebar .nav > li > a:hover,
+#sidebar .nav > li > a:focus {
+    background-color: crimson;
+    color: white;
+}
+
 body > div.navbar-wrapper > div > nav > div > div.navbar-header > a{
 color: white; !important;
 }
