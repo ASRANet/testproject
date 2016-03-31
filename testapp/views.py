@@ -197,7 +197,7 @@ def index(request):
                  "22 Jan 2017</p></td></tr></table></div><hr class='featurette-divider'>"
          }]
 
-    return render(request, 'index.html', {"story_list": stories})
+    return render(request, 'index.html', {"story_list": stories, "title": "Home"})
 
 
 def venue(request):
@@ -254,15 +254,15 @@ def venue(request):
         },
     ]
 
-    return render(request, 'venue.html', {"story_list": stories})
+    return render(request, 'venue.html', {"story_list": stories, "title": "Venue"})
 
 
 def accomodation(request):
-    return render(request, 'accomodation.html')
+    return render(request, 'accomodation.html', {"title": "Accomodation"})
 
 
 def contactus(request):
-    return render(request, 'contactUs.html')
+    return render(request, 'contactUs.html', {"title": "Contact Us"})
 
 
 def author_instructions(request):
@@ -326,7 +326,7 @@ def author_instructions(request):
         }
     ]
 
-    return render(request, 'baseTemplates/infoPageBase.html', {"story_list": stories})
+    return render(request, 'baseTemplates/infoPageBase.html', {"story_list": stories, "title": "Author Instructions"})
 
 
 def travel(request):
@@ -400,7 +400,7 @@ def travel(request):
                      "Croydon Bus Garage - Peckham, via Central Croydon, Addiscombe), 407, 410, 450, 455, 466 (not too"
                      " reliable), and X26 (West/East Croydon - Sutton - Kingston - Heathrow Central (Express))."]
         }]
-    return render(request, 'baseTemplates/infoPageBase.html', {"story_list": stories})
+    return render(request, 'baseTemplates/infoPageBase.html', {"story_list": stories, "title": "Travel"})
 
 
 def cookies(request):

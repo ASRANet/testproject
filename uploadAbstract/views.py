@@ -18,4 +18,4 @@ def index(request):
     else:
         form = UserForm()
 
-    return render(request, 'uploadAbstract/uploadAbstract.html', {'form': form})
+    return render(request, 'uploadAbstract/uploadAbstract.html', {'form': form, "title": "Register"})

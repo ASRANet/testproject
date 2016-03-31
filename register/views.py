@@ -18,4 +18,4 @@ def index(request):
     else:
         form = UserForm()
 
-    return render(request, 'register/register.html', {'form': form})
+    return render(request, 'register/register.html', {'form': form, "title": "Register"})
