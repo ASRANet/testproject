@@ -195,10 +195,9 @@ body {
     opacity: 0.5;
 }
 
-.navbar {
+#navbarColour {
     font-family: "Oswald", sans-serif;
     font-size: larger;
-    background-color: #5f5f5f;
 }
 
 #navbar > ul > li > a:hover{
