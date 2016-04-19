@@ -44,7 +44,7 @@ class PrioritySitemap(Sitemap):
 
 
 class Sitemaps(Sitemap):
-    priority = 0.5
+    priority = 0.4
     changefreq = 'monthly'
 
     def items(self):
