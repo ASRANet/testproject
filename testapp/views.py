@@ -191,10 +191,11 @@ def index(request):
                  "role='progressbar'aria-valuenow='0' aria-valuemin='0' aria-valuemax='100' style='width: 0;'>"
                  "</div></div><!-- If changing dates also change keyDeadlines variable in script.js-->"
                  "<table id='progressTable' class='table' style='text-align: center' id='keyDeadlinesTable'><tr><td>"
-                 "<p>Deadline for abstracts<br>6 Jul 2016</p></td><td><p>Notification of acceptance<br>"
-                 "6 Aug 2016</p></td>"
-                 "<td><p>Submission of full papers<br>4 Jan 2017</p></td><td><p>Registration closes<br>"
-                 "22 Jan 2017</p></td></tr></table></div><hr class='featurette-divider'>"
+                 "<p id='abstractDline'>Deadline for abstracts<br>6 Jul 2016</p></td>"
+                 "<td><p id='acceptanceDline'>Notification of acceptance<br>6 Aug 2016</p></td>"
+                 "<td><p id='fullPaperDline'>Submission of full papers<br>4 Jan 2017</p></td>"
+                 "<td><p id='registrationDline'>Registration closes<br>22 Jan 2017</p></td></tr></table>"
+                 "</div><hr class='featurette-divider'>"
          }]
 
     return render(request, 'index.html', {"story_list": stories, "title": "Home"})
