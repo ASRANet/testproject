@@ -163,7 +163,7 @@ def index(request):
                    "UK", ],
 
                   ["Prof C H Song",
-                   "Korea Atomic Research Insti-tute",
+                   "Korea Atomic Research Institute",
                    "South Korea", ],
 
                   ["Dr K D Tsavdaridis",
